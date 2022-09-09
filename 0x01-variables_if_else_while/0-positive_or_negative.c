@@ -1,1 +1,25 @@
-code 1-last_digit.c 2-print_alphabet.c 3-print_alphabets.c 4-print_alphabt.c 5-print_numbers.c 6-print_numberz.c 7-print_tebahpla.c 8-print_base16.c 9-print_comb.c
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+
+/**
+ * main - This program uses the function rand() to output
+ * random numbers to the screen, then tells the user if it's
+ * positive, negative, or a zero.
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
+		printf("%d is positive\n", n);
+	else if (n == 0)
+		printf("%d is zero\n", n);
+	else
+		printf("%d is negative\n", n);
+
+	return (0);
+}
