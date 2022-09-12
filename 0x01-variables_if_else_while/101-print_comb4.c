@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int a, b, c;
+	int a, b, c, d, e, f;
 	int i, j, k; /*counters*/
 
 	for (i = 0; i < 10; i++)
@@ -19,13 +19,17 @@ int main(void)
 				if (i != j && j != k && i != k)
 				{
 					a = (i / 10) + '0';
-					b = (j / 10) + '0';
-					c = (k / 10) + '0';
+					b = (i % 10) + '0';
+					c = (j / 10) + '0';
+					d = (j % 10) + '0';
+					e = (k / 10) + '0';
+					f = (k % 10) + '0';
 					putchar(a);
 					putchar(b);
 					putchar(c);
-					putchar(',');
-					putchar(' ');
+					putchar(d);
+					putchar(e);
+					putchar(f);
 				}
 			}
 		}
