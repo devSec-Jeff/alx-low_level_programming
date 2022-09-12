@@ -1,36 +1,31 @@
 #include <stdio.h>
 
 /**
- * main - This program prints all possible combinations of two two-digit numbers
+ * main - This program prints all possible combinations of
+ * three digit numbers
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int a, b, c, d;
-	int i, j; /* counters */
+	int i, j, k; /*counters*/
 
-	for (i = 0; i <= 99; i++)
+	for (i = 0; i < 10; i++)
 	{
-		for (j = i + 1; j <= 99; j++)
+		for (j = i; j < 10; j++)
 		{
-			a = (i / 10) + '0';
-			b = (i % 10) + '0';
-			c = (j / 10) + '0';
-			d = (j % 10) + '0';
-			putchar(a);
-			putchar(b);
-			putchar(' ');
-			putchar(c);
-			putchar(d);
-
-			if (i != 98)
+			for (k = j; k < 10; k++)
 			{
-				putchar(',');
-				putchar(' ');
+				if (i != j && j != k && i != k)
+				{
+					putchar(i);
+					putchar(j);
+					putchar(k);
+					putchar(',');
+					putchar(' ');
+				}
 			}
+			putchar('\n');
 		}
 	}
-
-	putchar('\n');
 	return (0);
 }
