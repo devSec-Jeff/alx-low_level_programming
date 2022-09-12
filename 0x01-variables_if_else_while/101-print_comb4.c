@@ -7,32 +7,36 @@
  */
 int main(void)
 {
-	int a, b, c, d, e, f;
-	int i, j, k; /*counters*/
+	int c;
+	int d;
+	int e = 0;
 
-	for (i = 0; i < 10; i++)
+	while (e < 10)
 	{
-		for (j = i; j < 10; j++)
+		d = 0;
+		while (d < 10)
 		{
-			for (k = j; k < 10; k++)
+			c = 0;
+			while (c < 10)
 			{
-				if (i != j && j != k && i != k)
+				if ( c != d && d != e && d < c)
 				{
-					a = (i / 10) + '0';
-					b = (i % 10) + '0';
-					c = (j / 10) + '0';
-					d = (j % 10) + '0';
-					e = (k / 10) + '0';
-					f = (k % 10) + '0';
-					putchar(a);
-					putchar(b);
-					putchar(c);
-					putchar(d);
-					putchar(e);
-					putchar(f);
+					putchar('0' + e);
+					putchar('0' + d);
+					putchar('0' + c);
+
+					if (c + d + e != 9 + 8 + 7)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
+				c++;
 			}
+			d++;
 		}
+		e++;
 	}
+	putchar('\n');
 	return (0);
 }
