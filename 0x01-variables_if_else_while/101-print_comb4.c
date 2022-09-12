@@ -23,7 +23,7 @@ int main(void)
 					c = (k / 10) + '0';
 					putchar(a);
 					putchar(b);
-					putchar(d);
+					putchar(c);
 					putchar(',');
 					putchar(' ');
 				}
