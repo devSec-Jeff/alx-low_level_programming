@@ -1,4 +1,4 @@
-#include "1-main.c"
+#include "_putchar.c"
 
 /**
  * print_alphabet - this function prints alphabet
@@ -8,5 +8,5 @@
 void print_alphabet(void)
 {
 	_putchar("abcdefghijklmnopqrstuvwxyz");
-	_putchar('\n');
+	_putchar("\n");
 }
