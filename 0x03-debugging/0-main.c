@@ -3,7 +3,6 @@
 /**
  * positive_or_negative - prints if an intger is positive or
  * negative
- * @i: integer parameter
  * Return: 0
  */
 int main(void)
