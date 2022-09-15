@@ -1,14 +1,13 @@
 #include <unistd.h>
-#include <string.h>
 
 /**
- * _putchar - This program prints array of characters
- * in the display
- * 
- * Return: The string fed into it
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char* c)
+int _putchar(char c)
 {
-	int len = strlen(c);
-	return (write(1, &c, len));
+  return (write(1, &c, 1));
 }
