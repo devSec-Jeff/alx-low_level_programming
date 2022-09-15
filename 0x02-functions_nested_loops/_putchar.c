@@ -7,7 +7,7 @@
  * 
  * Return: The string fed into it
  */
-int _putchar(char* c)
+int  _putchar(char *c)
 {
 	int len = strlen(c);
 	return (write(1, &c, len));
