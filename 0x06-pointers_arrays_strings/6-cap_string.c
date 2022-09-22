@@ -7,35 +7,34 @@
  */
 char *cap_string(char *s)
 {
-	int i;
-	char spc = " ", ffd = "\t", nwl = "\n",
-	     scl = ";", stp = ".", com = ",",
-	     qtn = "?", xcl = "!", qot = "\"",
-	     opr = "(", cpr = ")", obr = "{",
-	     cbr = "}";
+	int i = 0;
 
-	/*
-	 * capitalize the first word
-	 */
-	s[0] = s[0] - 32;
-
-	/*
-	 * loop throught the entire string and
-	 * capitalize words
-	 */
-	i = 0;
+	/*iterate through our array values*/
 	while (s[i] != '\0')
 	{
-		/*
-		 * check for separators
-		 */
-		if (s[i] == spc || s[i] == ffd || s[i] == nwl || s[i] == scl || s[i] == stp || s[i] == com || s[i] == qtn || s[i] == xcl || s[i] == qot || s[i] == opr || s[i] == cpr || s[i] == obr || s[i] == cbr)
+		/*check for any lowercase letters*/
+		if (s[i] >= 97 && s[i] <= 122)
 		{
-			/*
-			 * capitalize the following
-			 * word
-			 */
-			s[i + 1] -= 32;
+			/**
+			 * if we have a null character
+			 * change its value to capital
+			*/
+			if (i == 0)
+			{
+				s[i] -= 32;
+			}
+			/**
+			 * if we find any character matching the below before any small
+			 * letter we change that value to a capital letter.
+			*/
+			if (s[i - 1] == 32 || s[i - 1] == 9 || s[i - 1] == 10 ||
+				s[i - 1] == 44 || s[i - 1] == 59 || s[i - 1] == 46 ||
+				s[i - 1] == 33 || s[i - 1] == 63 || s[i - 1] == 34 ||
+				s[i - 1] == 40 || s[i - 1] == 41 || s[i - 1] == 123 ||
+				s[i - 1] == 124)
+			{
+				s[i] -= 32;
+			}
 		}
 		i++;
 	}
