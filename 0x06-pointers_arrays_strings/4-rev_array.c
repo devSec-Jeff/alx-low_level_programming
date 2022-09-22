@@ -13,4 +13,5 @@ void reverse_array(int *a, int n)
 		_putchar(a[n - 1]);
 		n--;
 	}
+	_putchar('\n');
 }
