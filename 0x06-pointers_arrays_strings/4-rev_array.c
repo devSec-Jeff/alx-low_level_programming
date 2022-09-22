@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * reverse_array - reverses the contents of an array
@@ -13,11 +14,12 @@ void reverse_array(int *a, int n)
 	i = n - 1;
 	while (i >= 0)
 	{
-		_putchar(a[i]);
+		printf("%d", a[i]);
 		if (i != 0)
 		{
-			_putchar(",");
+			printf(", ");
 		}
 		n--;
 	}
+	printf("\n");
 }
