@@ -8,12 +8,6 @@
  */
 int main(int argc, char __attribute__ ((unused)) *argv[])
 {
-	int i, total;
-
-	for (i = 0; i < argc; i++)
-	{
-		total += i;
-	}
-	printf("%d\n", total);
+	printf("%d\n", argc - 1);
 	return (0);
 }
