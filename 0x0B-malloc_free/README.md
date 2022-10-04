@@ -1,0 +1,1 @@
+Memmory allcocation in C
